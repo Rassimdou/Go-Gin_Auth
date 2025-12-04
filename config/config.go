@@ -47,7 +47,7 @@ func LoadConfig() (*DBconfig, *JWTconfig, *SERVERconfig, error) {
 	SERVER := &SERVERconfig{
 		Port: getEnv("PORT", "8080"),
 	}
-	return DB, JWT, SERVER, err
+	return DB, JWT, SERVER, nil
 }
 
 func getEnv(key, defaultValue string) string {
